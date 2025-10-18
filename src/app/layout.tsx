@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/global/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,10 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased bg-[url(/backgrounds/circuit.png)] bg-repeat bg-[#001d2f] text-white`}
-      >
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`antialiased bg-[#001d2f] text-white`}>
+        <div className="bg-[url(/backgrounds/circuit.png)] bg-repeat h-full w-full fixed -z-10 top-0 left-0"></div>
+        <Navbar />
         {children}
       </body>
     </html>
