@@ -1,54 +1,53 @@
 "use client";
 
-import { log } from "console";
-import { Url } from "next/dist/shared/lib/router/router";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Members = () => {
+  const fic = {
+    image: "/profile_pics/anil_kumar_swain.jpg",
+    name: "Anil Kumar Swain",
+    position: "Faculty Coordinator",
+  };
   const [leads, setLeads] = useState([
     {
-      image:
-        "https://drive.google.com/file/d/1M0fthMJmgbUzDil5WpOgcJUJx85QGtRz/view?usp=sharing",
-      name: "Kingsuk Nandi",
-      position: "Tech Lead",
+      image: "/profile_pics/aryan_bhargava.jpg",
+      name: "Aryan Bhargava",
+      position: "Society Lead",
     },
     {
-      image:
-        "https://drive.google.com/file/d/1M0fthMJmgbUzDil5WpOgcJUJx85QGtRz/view?usp=sharing",
-      name: "Kingsuk Nandi",
-      position: "Tech Lead",
+      image: "/profile_pics/aranya_dutta.png",
+      name: "Aranya Dutta",
+      position: "Coding Lead",
     },
     {
-      image:
-        "https://drive.google.com/file/d/1M0fthMJmgbUzDil5WpOgcJUJx85QGtRz/view?usp=sharing",
-      name: "Kingsuk Nandi",
-      position: "Tech Lead",
+      image: "/profile_pics/arya_singh_parihar.JPG",
+      name: "Arya Singh Parihar",
+      position: "Event Lead",
     },
     {
-      image:
-        "https://drive.google.com/file/d/1M0fthMJmgbUzDil5WpOgcJUJx85QGtRz/view?usp=sharing",
-      name: "Kingsuk Nandi",
-      position: "Tech Lead",
+      image: "/profile_pics/samridhi_sinha.jpg",
+      name: "Samridhi Sinha",
+      position: "Design Lead",
     },
   ]);
 
-  let count = 0;
+  //let count = 0;
 
-  useEffect(() => {
-    async function converter() {
-      const updatedPromises = leads.map(async (lead) => {
-        const imageUrl = await convertDriveLink(lead.image);
+  //useEffect(() => {
+  //  async function converter() {
+  //    const updatedPromises = leads.map(async (lead) => {
+  //      const imageUrl = await convertDriveLink(lead.image);
 
-        return { ...lead, image: imageUrl };
-      });
+  //      return { ...lead, image: imageUrl };
+  //    });
 
-      const updated = await Promise.all(updatedPromises);
-      setLeads(updated);
-    }
+  //    const updated = await Promise.all(updatedPromises);
+  //    setLeads(updated);
+  //  }
 
-    converter();
-  }, []);
+  //  converter();
+  //}, []);
 
   const convertDriveLink = async (url: string) => {
     url = url.replace(`file/d/`, `uc?export=view&id=`);
@@ -69,14 +68,15 @@ const Members = () => {
         </div>
         <div className="flex flex-col items-center gap-2">
           <Image
-            src={leads[0].image}
+            src={fic.image}
             width={230}
             height={230}
-            alt={leads[0].name}
+            alt={fic.name}
             className="rounded-full"
+            unoptimized
           />
-          <h3>{"Dr. Anil Kumar Swain"}</h3>
-          <h4 className="text-xs">{"Faculty Coordinator"}</h4>
+          <h3>{fic.name}</h3>
+          <h4 className="text-xs">{fic.position}</h4>
         </div>
       </div>
       <div className="flex flex-col items-center gap-5">
@@ -88,13 +88,17 @@ const Members = () => {
             const imageUrl = lead.image;
 
             return (
-              <div key={index} className="flex flex-col items-center gap-2">
+              <div
+                key={index}
+                className={`flex flex-col items-center gap-2 rounded-full `}
+              >
                 <Image
                   src={imageUrl}
                   width={200}
                   height={200}
                   alt={lead.name}
                   className="rounded-full"
+                  unoptimized
                 />
                 <h3>{lead.name}</h3>
                 <h4 className="text-sm">{lead.position}</h4>
