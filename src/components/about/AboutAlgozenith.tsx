@@ -41,7 +41,8 @@ By establishing college chapters like ours, AlgoZenith is building a nationwide 
         <span className="bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent">
           AlgoZenith
         </span>
-        is a premier competitive programming and coding education platform&nbsp;
+        &nbsp;is a premier competitive programming and coding education
+        platform&nbsp;
         <span className="bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent">
           founded by Vivek Gupta
         </span>

@@ -1,34 +1,40 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Members = () => {
   const fic = {
     image: "/profile_pics/anil_kumar_swain.jpg",
-    name: "Anil Kumar Swain",
+    name: "Dr. Anil Kumar Swain",
     position: "Faculty Coordinator",
+    link: "https://cse.kiit.ac.in/profiles/anil-kumar-swain/",
   };
   const [leads, setLeads] = useState([
     {
       image: "/profile_pics/aryan_bhargava.jpg",
       name: "Aryan Bhargava",
       position: "Society Lead",
+      link: "https://www.linkedin.com/in/aryan-bhargava",
     },
     {
       image: "/profile_pics/aranya_dutta.png",
       name: "Aranya Dutta",
       position: "Tech Lead",
+      link: "https://www.linkedin.com/in/thisisaro/",
     },
     {
       image: "/profile_pics/arya_singh_parihar.JPG",
       name: "Arya Singh Parihar",
       position: "Event Lead",
+      link: "https://www.linkedin.com/in/arya-singh-parihar-a766a427b/",
     },
     {
       image: "/profile_pics/samridhi_sinha.jpg",
       name: "Samridhi Sinha",
       position: "Design Lead",
+      link: "https://www.linkedin.com/in/samridhi-sinha-20b170318/",
     },
   ]);
 
@@ -67,14 +73,15 @@ const Members = () => {
           Our Mentor
         </div>
         <div className="flex flex-col items-center gap-2">
+          <Link href={fic.link} target="_blank">
           <Image
             src={fic.image}
             width={230}
             height={230}
             alt={fic.name}
-            className="rounded-full"
+            className="rounded-full hover:brightness-110 hover:scale-[1.01] transition-all"
             unoptimized
-          />
+          /></Link>
           <h3>{fic.name}</h3>
           <h4 className="text-xs">{fic.position}</h4>
         </div>
@@ -92,14 +99,16 @@ const Members = () => {
                 key={index}
                 className={`flex flex-col items-center gap-2 rounded-full `}
               >
-                <Image
-                  src={imageUrl}
-                  width={200}
-                  height={200}
-                  alt={lead.name}
-                  className="rounded-full w-[175px] md:w-[200px]"
-                  unoptimized
-                />
+                <Link href={lead.link} target="_blank">
+                  <Image
+                    src={imageUrl}
+                    width={200}
+                    height={200}
+                    alt={lead.name}
+                    className="rounded-full w-[175px] md:w-[200px] hover:brightness-125 hover:scale-[1.01] transition-all"
+                    unoptimized
+                  />
+                </Link>
                 <h3 className="text-sm md:text-base">{lead.name}</h3>
                 <h4 className="text-xs md:text-sm">{lead.position}</h4>
               </div>

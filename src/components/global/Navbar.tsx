@@ -46,7 +46,7 @@ const Navbar = () => {
       >
         <motion.div className="p-10 hidden lg:block">
           <nav className="shadow-2xl border border-gray-400/10 flex items-center justify-between w-full px-10 py-4 bg-gray-400/10 rounded-full backdrop-filter backdrop-blur-xs bg-opacity-20">
-            <div className="flex gap-5 items-center relative">
+            <Link href={"/"} className="flex gap-5 items-center relative">
               <Image
                 src={"/icons/logo.png"}
                 height={50}
@@ -55,7 +55,7 @@ const Navbar = () => {
                 className="drop-shadow-2xl "
               />
               {collapsed ? "" : <span className="">ALGOZENITH</span>}
-            </div>
+            </Link>
             <AnimatePresence>
               {collapsed ? (
                 <motion.span
@@ -86,7 +86,7 @@ const Navbar = () => {
       <div className="lg:hidden fixed top-0 left-0 font-pixel z-20 w-full">
         <motion.div className="lg:hidden p-5">
           <nav className="shadow-2xl border border-gray-400/10 flex items-center justify-between w-full px-5 py-4 bg-gray-400/10 rounded-full backdrop-filter backdrop-blur-xs bg-opacity-20">
-            <div className="flex gap-5 items-center">
+            <Link href={"/"} className="flex gap-5 items-center">
               <Image
                 src={"/icons/logo.png"}
                 height={40}
@@ -96,7 +96,7 @@ const Navbar = () => {
               />
 
               <span>ALGOZENITH</span>
-            </div>
+            </Link>
 
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}

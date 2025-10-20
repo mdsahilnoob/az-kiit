@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const UpcomingEvents = () => {
   const event = {
-    link:"#",
+    link: "https://forms.gle/NBhLhEmpPn4HCd7W8",
     name: "Competitive Programming Headstart",
     description: "Your roadmap from DSA to Competitive Programming",
     date: "25th October, 2025",

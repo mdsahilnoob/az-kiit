@@ -6,9 +6,9 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const ContactGrid = () => {
-  const insta = "";
-  const linkedin = "";
-  const form = "";
+  const insta = "https://www.instagram.com/algozenith_kiit";
+  const linkedin = "https://www.linkedin.com/company/algozenith-kiit-chapter";
+  const form = "https://forms.gle/NFuYHqtqznBbu1mW9";
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center font-pixel">
@@ -65,7 +65,7 @@ const ContactGrid = () => {
             href={form}
             target="_blank"
             rel="noopener noreferrer"
-            className="pt-6 hover:scale-105 transition-all bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent text-lg"
+            className="pt-6 text-center underline decoration-[#c1127e] hover:scale-105 transition-all bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent text-lg"
           >
             Open Query Form -&gt;
           </Link>

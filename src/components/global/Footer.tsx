@@ -45,10 +45,10 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <div className="text-sm text-gray-300">
-              Contact:{" "}
+              {/*Contact:{" "}
               <a href="mailto:algozenith@kiit.ac.in" className="underline">
                 algozenith@kiit.ac.in
-              </a>
+              </a>*/}
             </div>
             <div className="text-xs text-gray-400 mt-2">
               © {new Date().getFullYear()} AlgoZenith KIIT Chapter. All rights
