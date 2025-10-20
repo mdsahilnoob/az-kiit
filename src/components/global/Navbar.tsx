@@ -102,7 +102,7 @@ const Navbar = () => {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl p-2 rounded-full hover:bg-white/10 transition-colors duration-200 cursor-pointer"
+              className="rotate-90 text-2xl p-2 rounded-full hover:bg-white/10 transition-colors duration-200 cursor-pointer"
             >
               {menuOpen ? "<" : ">"}
             </button>

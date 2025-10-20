@@ -18,7 +18,7 @@ const Members = () => {
     {
       image: "/profile_pics/aranya_dutta.png",
       name: "Aranya Dutta",
-      position: "Coding Lead",
+      position: "Tech Lead",
     },
     {
       image: "/profile_pics/arya_singh_parihar.JPG",
@@ -49,16 +49,16 @@ const Members = () => {
   //  converter();
   //}, []);
 
-  const convertDriveLink = async (url: string) => {
-    url = url.replace(`file/d/`, `uc?export=view&id=`);
-    url = url.replace(`/view?usp=sharing`, "");
+  //const convertDriveLink = async (url: string) => {
+  //  url = url.replace(`file/d/`, `uc?export=view&id=`);
+  //  url = url.replace(`/view?usp=sharing`, "");
 
-    count++;
+  //  count++;
 
-    console.log(count);
+  //  console.log(count);
 
-    return url;
-  };
+  //  return url;
+  //};
 
   return (
     <div className="min-h-lvh flex gap-20 flex-col items-center justify-center font-pixel">
@@ -83,7 +83,7 @@ const Members = () => {
         <div className="text-2xl md:text-4xl bg-gradient-to-b from-[#d7eab6] to-[#2ba6a7] bg-clip-text text-transparent">
           Our Leads
         </div>
-        <div className="flex gap-10 flex-wrap justify-center">
+        <div className="flex md:flex-row flex-col gap-10 flex-wrap justify-center">
           {leads.map((lead, index) => {
             const imageUrl = lead.image;
 
@@ -97,11 +97,11 @@ const Members = () => {
                   width={200}
                   height={200}
                   alt={lead.name}
-                  className="rounded-full"
+                  className="rounded-full w-[175px] md:w-[200px]"
                   unoptimized
                 />
-                <h3>{lead.name}</h3>
-                <h4 className="text-sm">{lead.position}</h4>
+                <h3 className="text-sm md:text-base">{lead.name}</h3>
+                <h4 className="text-xs md:text-sm">{lead.position}</h4>
               </div>
             );
           })}

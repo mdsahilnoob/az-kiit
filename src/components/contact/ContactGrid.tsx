@@ -9,6 +9,7 @@ const ContactGrid = () => {
   const insta = "";
   const linkedin = "";
   const form = "";
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center font-pixel">
       <Padder />
@@ -35,45 +36,36 @@ const ContactGrid = () => {
         />
       </h1>
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-4 w-[60%] h-[500px] p-4 pt-14">
-        {/* Instagram - left top */}
+      {/* Responsive Grid */}
+      <div className="grid w-fit grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 md:px-4 md:w-[90%] lg:w-[60%] h-auto p-4 pt-14">
+        {/* Instagram */}
         <Link
           href={insta}
           target="_blank"
-          className="w-fit shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 col-start-1 col-span-1 row-start-1 row-span-1 flex items-center justify-center "
+          className="shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 flex items-center justify-center p-4"
         >
-          <Icon
-            icon="skill-icons:instagram"
-            width="200"
-            height="200"
-            className="p-4"
-          />
+          <Icon icon="skill-icons:instagram" width="120" height="120" />
         </Link>
 
-        {/* LinkedIn - left bottom */}
+        {/* LinkedIn */}
         <Link
           href={linkedin}
           target="_blank"
-          className="w-fit shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 col-start-1 col-span-1 row-start-2 row-span-1 flex items-center justify-center "
+          className="shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 flex items-center justify-center p-4"
         >
-          <Icon
-            icon="skill-icons:linkedin"
-            width="200"
-            height="200"
-            className="p-4"
-          />
+          <Icon icon="skill-icons:linkedin" width="120" height="120" />
         </Link>
 
-        {/* Form - right, spans 2 columns wide and 2 rows tall */}
-        <div className="shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 col-start-2 col-span-2 row-start-1 row-span-2 flex flex-col items-center justify-center">
-          <p className="text-lg font-medium p-10 pb-0 text-center">
+        {/* Form */}
+        <div className="shadow-2xl border border-gray-400/10 bg-gray-400/10 rounded-4xl backdrop-filter backdrop-blur-xs bg-opacity-20 flex flex-col items-center justify-center col-span-2 lg:col-span-2 lg:row-span-2 p-8">
+          <p className="text-lg font-medium p-6 pb-0 text-center">
             Have a query? No worries, submit your query here:
           </p>
           <Link
             href={form}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-10 hover:scale-105 transition-all bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent"
+            className="pt-6 hover:scale-105 transition-all bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent text-lg"
           >
             Open Query Form -&gt;
           </Link>
