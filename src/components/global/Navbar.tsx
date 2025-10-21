@@ -23,7 +23,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      console.log(window.scrollY);
+      //console.log(window.scrollY);
 
       // fold navbar after user scrolls down 80px (tweak value as needed)
       setCollapsed(window.scrollY > 60);
