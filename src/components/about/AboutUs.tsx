@@ -8,7 +8,7 @@ Our mission is simple — to help every student unlock their potential, build pr
 
   return (
     <div className="min-h-screen font-pixel flex flex-col items-center justify-center">
-      <Padder />
+      {/*<Padder />*/}
       <h1 className="text-2xl sm:text-4xl lg:text-6xl relative w-full">
         <Image
           src={"/arts/connector-line.png"}

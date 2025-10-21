@@ -12,7 +12,7 @@ const ContactGrid = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center font-pixel">
-      <Padder />
+      {/*<Padder />*/}
       <h1 className="text-2xl lg:text-5xl relative w-full">
         <Image
           src={"/arts/connector-line.png"}

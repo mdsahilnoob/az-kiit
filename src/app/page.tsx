@@ -4,10 +4,10 @@ import Members from "@/components/home/Members";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-10 pt-[50px]">
       <Hero />
       <Members />
       {/*<Domains />*/}
-    </>
+    </div>
   );
 }

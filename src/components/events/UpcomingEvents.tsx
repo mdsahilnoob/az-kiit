@@ -14,7 +14,7 @@ const UpcomingEvents = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center font-pixel">
-      <Padder />
+      {/*<Padder />*/}
       <div className="h-18 md:h-4"></div>
       <h1 className="text-2xl lg:text-5xl relative w-full">
         <Image
