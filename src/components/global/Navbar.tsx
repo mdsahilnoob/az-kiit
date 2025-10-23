@@ -9,10 +9,11 @@ import { div } from "motion/react-client";
 const Navbar = () => {
   const [navitems, setNavitems] = useState([
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    //{ name: "Team", href: "/team" },
     { name: "Events", href: "/events" },
+    { name: "About", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
+    //{ name: "Team", href: "/team" },
+
     //{ name: "Gallery", href: "/gallery" },
   ]);
 
