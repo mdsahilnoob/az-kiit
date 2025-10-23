@@ -4,15 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { div } from "motion/react-client";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [navitems, setNavitems] = useState([
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    //{ name: "Team", href: "/team" },
     { name: "Events", href: "/events" },
+    { name: "About", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
+    //{ name: "Team", href: "/team" },
+
     //{ name: "Gallery", href: "/gallery" },
   ]);
 
@@ -20,6 +21,12 @@ const Navbar = () => {
   const [collapsed, setCollapsed] = useState(false);
   // when collapsed, menuOpen toggles the expanded menu
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  console.log(pathname);
+
+  const isActive = (href: string) => pathname === href;
 
   useEffect(() => {
     const onScroll = () => {
@@ -67,11 +74,22 @@ const Navbar = () => {
                   {">"}
                 </motion.span>
               ) : (
-                <motion.div key={"expanded"} className="flex gap-14">
+                <motion.div
+                  key={"expanded"}
+                  className="flex gap-14 items-center"
+                >
                   {navitems.length > 0 &&
                     navitems.map((item, index) => {
                       return (
-                        <Link key={index} href={item.href}>
+                        <Link
+                          key={index}
+                          href={item.href}
+                          className={`${
+                            isActive(item.href)
+                              ? "bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent"
+                              : ""
+                          } block px-4 py-2 rounded-md text-sm hover:bg-white/10 transition-all`}
+                        >
                           {item.name}
                         </Link>
                       );
@@ -86,7 +104,7 @@ const Navbar = () => {
       <div className="lg:hidden fixed top-0 left-0 font-pixel z-20 w-full">
         <motion.div className="lg:hidden p-5">
           <nav className="shadow-2xl border border-gray-400/10 flex items-center justify-between w-full px-5 py-4 bg-gray-400/10 rounded-full backdrop-filter backdrop-blur-xs bg-opacity-20">
-            <Link href={"/"} className="flex gap-5 items-center">
+            <Link href={"/"} className={`flex gap-5 items-center`}>
               <Image
                 src={"/icons/logo.png"}
                 height={40}
@@ -124,7 +142,11 @@ const Navbar = () => {
                       key={index}
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block px-4 py-2 rounded-md text-sm hover:bg-white/10 transition-colors duration-150"
+                      className={`${
+                        isActive(item.href)
+                          ? "bg-gradient-to-b from-[#d4adcd] to-[#c1127e] bg-clip-text text-transparent"
+                          : ""
+                      } px-4 py-2 block rounded-md text-sm hover:bg-white/10 transition-colors duration-150`}
                     >
                       {item.name}
                     </Link>
