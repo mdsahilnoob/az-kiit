@@ -24,3 +24,16 @@
 @theme {
   --font-pridi: pridi, "sans-serif";
 }
+
+/* Animation delay utilities */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
