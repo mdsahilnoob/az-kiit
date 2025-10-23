@@ -2,7 +2,7 @@ import ContactGrid from "@/components/contact/ContactGrid";
 
 export default function Page() {
   return (
-    <div  className="flex flex-col gap-10 pt-[130px]">
+    <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pt-[100px] sm:pt-[120px] lg:pt-[130px] px-4 sm:px-6 lg:px-8">
       <ContactGrid />
     </div>
   );
